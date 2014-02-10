@@ -1130,6 +1130,7 @@
 		7CFC968B13B39FCD008A055D /* 243.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC968A13B39FCD008A055D /* 243.pdf */; };
 		7CFD7F5712EEED4C0066D272 /* Cough.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7CFD7F5612EEED4C0066D272 /* Cough.aiff */; };
 		7CFDCBD012B641D7001C3B96 /* Results.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7CFDCBCF12B641D7001C3B96 /* Results.xml */; };
+		CD81ED8418A8534B00FC551E /* NumberOfQuestionsToChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = CD81ED8318A8534B00FC551E /* NumberOfQuestionsToChoose.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -2420,6 +2421,8 @@
 		7CFD7F5612EEED4C0066D272 /* Cough.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Cough.aiff; sourceTree = "<group>"; };
 		7CFDCBCF12B641D7001C3B96 /* Results.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Results.xml; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Evaluator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Evaluator-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		CD81ED8218A8534B00FC551E /* NumberOfQuestionsToChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOfQuestionsToChoose.h; sourceTree = "<group>"; };
+		CD81ED8318A8534B00FC551E /* NumberOfQuestionsToChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOfQuestionsToChoose.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2716,6 +2719,8 @@
 				7C936159127C323D0047FBD0 /* FillTheBlanks.m */,
 				7C93615D127C32520047FBD0 /* FillTheBlanks1.h */,
 				7C93615E127C32520047FBD0 /* FillTheBlanks1.m */,
+				CD81ED8218A8534B00FC551E /* NumberOfQuestionsToChoose.h */,
+				CD81ED8318A8534B00FC551E /* NumberOfQuestionsToChoose.m */,
 			);
 			name = "Template Views";
 			sourceTree = "<group>";
@@ -5028,6 +5033,7 @@
 				7C9C3B06126D8F2F00CB4E64 /* Evaluator.xcdatamodel in Sources */,
 				7C9C3BF9126DD9B000CB4E64 /* ViewQuestionList.m in Sources */,
 				7C153F38126F261D009CABCC /* Uploads.m in Sources */,
+				CD81ED8418A8534B00FC551E /* NumberOfQuestionsToChoose.m in Sources */,
 				7C764BED12775BE8002D8F90 /* DescriptiveType.m in Sources */,
 				7C764BFE1277614D002D8F90 /* DescriptiveType1.m in Sources */,
 				7CDB8E9612785AD500449B64 /* TrueOrFalseYesOrNo.m in Sources */,
@@ -5084,7 +5090,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = "~/Documents/apps/Evaluator_svn/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Joseph caxton (99S98QLWW3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joseph caxton (99S98QLWW3)";
 				COPY_PHASE_STRIP = YES;
@@ -5123,9 +5128,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = "~/Documents/apps/Evaluator_svn/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Theta Computer Services Limited (9RNCM436XC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Theta Computer Services Limited (9RNCM436XC)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5159,17 +5162,18 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Theta Computer Services Limited";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Theta Computer Services Limited";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Theta Computer Services Limited (9RNCM436XC)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Theta Computer Services Limited (9RNCM436XC)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Evaluator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				New_Setting = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "7BC9C8EB-20A4-42DB-9853-D711852D39E9";
-				"PROVISIONING_PROFILE[sdk=*]" = "7BC9C8EB-20A4-42DB-9853-D711852D39E9";
+				PROVISIONING_PROFILE = "47B1E019-5216-4598-97D7-97B5EA6942BA";
+				"PROVISIONING_PROFILE[sdk=*]" = "47B1E019-5216-4598-97D7-97B5EA6942BA";
 				SDKROOT = iphoneos;
 			};
 			name = Distribution;
@@ -5181,9 +5185,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Theta Computer Services Limited (9RNCM436XC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Theta Computer Services Limited (9RNCM436XC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Theta Computer Services Limited (9RNCM436XC)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5223,10 +5226,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
+				INFOPLIST_FILE = "Evaluator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				New_Setting = "";
-				PROVISIONING_PROFILE = "5F6E8BB5-4758-405B-B989-115A59BAB13B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5F6E8BB5-4758-405B-B989-115A59BAB13B";
+				PROVISIONING_PROFILE = "A5C1A030-2545-4D30-B6D3-D412D1E163B3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A5C1A030-2545-4D30-B6D3-D412D1E163B3";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -5235,17 +5239,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Theta Computer Services Limited";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Theta Computer Services Limited";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Theta Computer Services Limited (9RNCM436XC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Theta Computer Services Limited (9RNCM436XC)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Evaluator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				New_Setting = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "7BC9C8EB-20A4-42DB-9853-D711852D39E9";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7BC9C8EB-20A4-42DB-9853-D711852D39E9";
+				PROVISIONING_PROFILE = "47B1E019-5216-4598-97D7-97B5EA6942BA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47B1E019-5216-4598-97D7-97B5EA6942BA";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
